@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mo'orea Coral</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="Health of Mo'orea coral reefs"/>
+    <meta property="og:url" content="http://geoviz.ceoas.oregonstate.edu/storymap/examples/2.5/video.html"/>
+    <meta property="og:description" content="This is a story map describing selected sources of nutrients at the island of Mo'orea."/>
+    <meta property="og:image" content="../../img/social.png"/>
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--leaflet css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/storymap.2.5.css"><!--check filepath***>
+    <!--add required libraries-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!--boostrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--leaflet.ajax for asynchronously adding geojson data-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--mini global map-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="js/globeminimap.js"></script> <!--***Check filepath>
+
+    <!--story map plugin-- ***Check this line filepath-->
+    <script src="js/storymap.2.5.js"></script>
+</head>
+<body>
+
+<div id="storymap" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-3 storymap-story">
+
+            <section data-scene="overview" data-background="assets/aerialShot.png">
+                <div class="fullscreen text-center">
+                    <h1 class= >Mo'orea: Tour of Onshore Nutrient Sources</h1>
+                    <h2 class= >How do nutrients impact the health of Mo'orea's coral reef system?</h2>
+                    </large>
+                </div>
+            </section>
+
+            <section data-scene="moorea">
+                <h2>Mo'orea</h2>
+                <p>Located in the Society Islands of French Polynesia, Mo'orea lies about 12 miles northwest of Tahiti.</p>
+                <img src="assets/blueCoast.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                     alt-text="Oblique view of Mo'orea coastline.">
+                <p>The coral reefs surrounding the island hold tremendous biological and cultural significance to Mo'oreans.</p>
+                <p>Onshore human activity may have an impact on offshore coral reef health.</p>
+            </section>
+
+            <section data-scene="mooreaLTER">
+                <h2>Mo'orea's LTER Monitoring System</h2>
+                <p>The Mo'orea Coral Reef Long-Term Ecological Research (LTER) Network has been in place since 2004.</p>
+                <p>Research at this site covers a multitude of ecological data series, such as the bi-monthly water column nutrient concentrations data shown here off the north shore of the island.</p>
+                <img src="assets/bleach.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                     alt-text="Tropical fish swimming near possibly bleached coral.">
+                <p>Such data may illuminate patterns and shifts in nutrient concentration over time.</p>
+            </section>
+
+            <section data-scene="CooksBay">
+                <h3>Cook's Bay: Infrastructure</h3>
+                <p>Cook's Bay is a prime example of built-up areas on the island.</p>
+                <img src="assets/hotel.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                     alt-text="Mo'orean hotels close to beach.">
+                <p>Infrastructure along the shoreline serves as a potential source of increased nutrient and sediment load in nearby waters.</p>
+            </section>
+
+            <section data-scene="CooksBay2">
+                <h2>Cook's Bay: Imagery</h2>
+                <img src="assets/road.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                     alt-text="Biker on road.">
+                <p>Towns and human construction growing along the bay have spead up into the steep slopes leading to the center of the island.</p>
+            </section>
+
+            <section data-scene="vegetation">
+                <h2>Vegetation Coverage</h2>
+                <p>Patches of cleared vegetation can be found scattered around the island.</p>
+                <img src="assets/landscapeRow.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                     alt-text="Rows of crop with mountains in background.">
+            </section>
+
+            <section data-scene="ridge">
+                <h2>Ridgelines</h2>
+                <p>High-slope areas cut across the island only a short distance from the coast.</p>
+                <img src="assets/terrain.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                     alt-text="Steep valley cutting through high slopes.">
+                <p>In fact, very little of the island has gentle slopes.</p>
+            </section>
+
+            <section data-scene="coralPassages">
+                <h2>Passages and Flow</h2>
+                <p>Passageways have been cut through the reef to increase ease of ship passage. Consequential impact on the circulation of nutrients? Currently unknown.</p>
+                <p>Identifying coral reef connecivity may shed light on the course that suspended sediments and nutrients follow throughout the reef.</p>
+                <img src="assets/treeCoral.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                     alt-text="Tree coral growing on other (bleached?) coral.">
+                <p>Future research will center on delineating the flow of sediments throughout the coral reef.</p>
+            </section>
+
+            <section data-scene="end" data-background="../../assets/fish.jpg">
+                <div class="fullscreen text-center">
+                    <h1 class="display-4 d-flex justify-content-center">Thank you for your interest.</h1>
+                </div>
+            </section>
+
+        </div>
+        <!--map div-->
+        <div class="col-sm-6 col-md-8 storymap-map"></div>
+    </div>
+
+
+    <dl>
+        <dt>
+            <!--facebook icon-->
+            <a class="fab fa-facebook-square btn"
+               href="https://facebook.com/sharer.php?u=http://geoviz.ceoas.oregonstate.edu/storymap/examples/2.5/video.html"
+               target="_blank"></a>
+        </dt>
+        <dt>
+            <!--facebook icon-->
+            <a class="fab fa-github btn" href="https://branblack3125.github.io/mooreastory/" style="top:40px"
+               target="_blank"></a>
+        </dt>
+        <dt>
+            <!--info icon-->
+            <i class="fas fa-info-circle btn" style="top:60px" data-toggle="modal" data-target="#info-modal"></i>
+        </dt>
+    </dl>
+
+    <!--the info page-->
+    <div class="modal fade" id="info-modal" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This storymap is built to describe ties between onshore activity and offshore coral reef health
+                        associated with water column nutrient concentrations. The story map library is derived from the
+                        storymap plugin for leaflet at <a>http://atlefren.github.io/storymap/</a>, and its functionality
+                        relies on both leaflet and Boostrap.</p>
+                    <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.5 | MIT License </p>
+                    <p><b>Author: Bran Black</b> | College of Earth, Ocean, Atmospheric Science | Oregon State University
+                    </p>
+                    <p>Sources of data came from LTER site data and personal communication with researchers who have worked on Mo'orea.</p>
+                    <p>The favicon image was acquired from <a>http://www.udlcenter.org/advocacy/state/oregon.</a></p>
+                    <p>This story map uses geospatial data from mapbox, Google Earth Engine, ESRI Map, Open Street Maps,
+                      OpenLayers, and Mapbox.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- main javascript -->
+<script type="text/javascript">
+
+
+    // Create Legend Contents in html format
+    var county_legend = '<i style="background: blue; opacity: 0.5"></i><p><b>Sample LTER Sites</b></p>';
+
+    var layers = {
+        ESRI: {layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')},
+        dark: {layer: L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png')},
+        contourMoorea: {layer: L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')},
+        comboMoorea: {layer: L.tileLayer('assets/Mapnik/{z}/{x}/{y}.png')},
+        watercolor: {layer: L.tileLayer('http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg')},
+        LTER: {
+            layer: L.geoJson.ajax('assets/MooreaLTER.geojson', {
+                color: 'blue',
+            }), legend: county_legend
+        },
+
+        satellite: {
+            layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+                id: 'mapbox.satellite'
+            })
+        },
+        cartodb_voyager: {layer: L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png')}
+    };
+
+    var scenes = {
+        overview: {lat: -17.536719, lng: -149.834311, zoom: 13, name: 'Cover Page', layers: []},
+        moorea: {lat: -17.536719, lng: -149.834311, zoom: 13, name: 'Moorea', layers: [layers.watercolor]},
+        mooreaLTER: {lat: -17.536719, lng: -149.834311, zoom: 13, name: 'Moorea LTER', layers: [layers.contourMoorea, layers.LTER]},
+        CooksBay: {lat: -17.494985, lng: -149.821757, zoom: 15, name: 'Cooks Bay', layers: [layers.dark]},
+        CooksBay2: {lat: -17.494985, lng: -149.821757, zoom: 15, name: 'Cooks Bay RS', layers: [layers.satellite]},
+        vegetation: {lat: -17.524387, lng: -149.821757, zoom: 15, name: 'Cleared Vegetation', layers: [layers.satellite]},
+        ridge: {lat: -17.529738, lng: -149.876666, zoom: 15, name: 'Ridge', layers: [layers.comboMoorea]},
+        coralPassages: {lat: -17.487378, lng: -149.894747, zoom: 16, name: 'Coral Passages', layers: [layers.satellite]},
+        end: {lat: -17.536719, lng: -149.834311, zoom: 13, zoom: 13, name: 'The End', layers: [layers.watercolor]}
+    };
+
+    $('#storymap').storymap({
+        scenes: scenes,
+        baselayer: layers.cartodb_voyager,
+        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        credits: "",
+        loader: true,
+        scalebar: false,
+        flyo: true,
+        navwidget: true,
+
+        createMap: function () {
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map($(".storymap-map")[0], {
+                zoomControl: false, scrollWheelZoom: false, fadeAnimation: true,
+                zoomAnimation: true
+            }).setView([-17.5, -149.8], 7);
+
+            //add an miniglobe
+            new L.Control.GlobeMiniMap({
+                marker: 'red',
+                position: 'bottomright'
+            }).addTo(map);
+            return map;
+        }
+    });
+</script>
+</body>
+</html>
